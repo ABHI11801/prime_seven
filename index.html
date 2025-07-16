@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME SEVEN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(90deg, #ffffff 0%, #fffbeb 100%);
+            border-bottom: 2px solid #fde68a;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #78350f;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            font-size: 1.125rem;
+            color: #a16207;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            color: #78350f;
+            margin-bottom: 2rem;
+        }
+
+        /* Leadership Grid */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Team Members Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid #fde68a;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 25px rgba(251, 191, 36, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .leadership-card {
+            max-width: 350px;
+        }
+
+        /* Image Styles */
+        .member-image {
+            width: 144px;
+            height: 144px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid rgba(251, 191, 36, 0.4);
+        }
+
+        .leader-image {
+            width: 192px;
+            height: 192px;
+            border: 4px solid rgba(251, 191, 36, 0.3);
+        }
+
+        /* Badge Styles */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .badge-leader {
+            background-color: #eab308;
+            color: white;
+        }
+
+        .badge-member {
+            background-color: #fef3c7;
+            color: #a16207;
+        }
+
+        /* Text Styles */
+        .member-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .leader-name {
+            font-size: 1.25rem;
+        }
+
+        .member-description {
+            color: #6b7280;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .leader-description {
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #fffbeb 0%, #ffffff 100%);
+            border-top: 2px solid #fde68a;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            text-align: center;
+            padding: 2rem 0;
+            color: #a16207;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .member-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .leader-image {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .card {
+                padding: 1rem;
+            }
+
+            .member-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .leader-image {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Prime Seven</h1>
+                <p>Meet our amazing team of professionals</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Leadership Section -->
+            <section class="section">
+                <h2 class="section-title">Leadership</h2>
+                <div class="leadership-grid">
+                    <div class="card leadership-card">
+                        <img src="/website/adi.jpeg" alt="Adithyakrishna J.G" class="member-image leader-image">
+                        <span class="badge badge-leader">Captain</span>
+                        <h3 class="member-name leader-name">Adithyakrishna J.G</h3>
+                    </div>
+                    <div class="card leadership-card">
+                        <img src="/website/amal.jpeg" alt="Amal Jerin" class="member-image leader-image">
+                        <span class="badge badge-leader">Vice Captain</span>
+                        <h3 class="member-name leader-name">Amal Jerin</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Members Section -->
+            <section class="section">
+                <h2 class="section-title">Team Members</h2>
+                <div class="team-grid">
+                    <div class="card">
+                        <img src="/website/aleena.jpeg" alt="Aleena" class="member-image">
+                        <span class="badge badge-member">Developer</span>
+                        <h3 class="member-name">Aleena K.J</h3>
+                    </div>
+                    <div class="card">
+                        <img src="/website/anna" alt="Anna" class="member-image">
+                        <span class="badge badge-member">Designer</span>
+                        <h3 class="member-name">Anna Luciya Gabriel</h3>
+                    </div>
+                    <div class="card">
+                        <img src="/website/abhishek.jpeg" alt="Abhishek" class="member-image">
+                        <span class="badge badge-member">Analyst</span>
+                        <h3 class="member-name">Abhishek Ajay L</h3>
+                    </div>
+                    <div class="card">
+                        <img src="/website/arjun.jpeg" alt="Arjun" class="member-image">
+                        <span class="badge badge-member">Marketing Specialist</span>
+                        <h3 class="member-name">Arjun P Kumar</h3>
+                    </div>
+                    <div class="card">
+                        <img src="/website/chinmay.jpeg" alt="Chinmay" class="member-image">
+                        <span class="badge badge-member">Support Specialist</span>
+                        <h3 class="member-name">Chinmayi T.A</h3>
+                    </div>
+                    <div class="card">
+                        <img src="/website/aravind.jpeg" alt="James Wilson" class="member-image">
+                        <span class="badge badge-member">Support Specialist</span>
+                        <h3 class="member-name">Aravind Aji</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Team Prime Seven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
